@@ -1,0 +1,20 @@
+.ubicacion {
+  &__iconosContenedor {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  &__btnMap {
+    margin-left: 1rem;
+    width: 13rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedorIconos__dibujo {
+    width: 15rem;
+    height: 5rem;
+  }
+}

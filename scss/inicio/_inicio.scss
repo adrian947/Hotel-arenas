@@ -1,0 +1,336 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+/*reserva*/
+.reservaFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &__reservaCampo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+label {
+  min-width: 7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @include desktop {
+    min-width: unset;
+    margin-right: 0.5rem;
+  }
+}
+
+input {
+  padding: 0.3rem;
+  width: 100%;
+  outline: none;
+
+  @include telefono {
+    margin-bottom: 0;
+  }
+}
+
+select {
+  outline: none;
+  padding: 0.3rem;
+  width: 100%;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.btnReserva {
+  background-color: $secundario;
+  text-transform: uppercase;
+  border: none;
+  color: #f4f4f4;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: darken($secundario, 10);
+    color: #fff;
+    cursor: pointer;
+  }
+  @include tablet {
+    padding: 0.4rem;
+  }
+}
+.btnReserva_pad {
+  padding: 0.6rem;
+  @include tablet {
+    padding: 0.4rem;
+  }
+}
+
+#bienvenidos {
+  background-image: url("../img/header.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 30rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 1rem;
+}
+#bienvenidos::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.6;
+}
+
+.bienvenidosDark__parrafoBienvenidos {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  line-height: 2;
+}
+.contenedor h1 {
+  color: #fff;
+  position: relative;
+}
+.titleBienvenidos {
+  color: #fff;
+  position: relative;
+}
+/*fin reserva*/
+/**********************************************************/
+/*Cards*/
+h2 {
+  margin-bottom: 1rem;
+}
+
+.card__contenedorCard {
+  @include telefono {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @include tablet {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .card__contenido {
+    border: 1px solid $primario;
+    margin-bottom: 1rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    p {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  }
+}
+
+/*fin cards*/
+/**********************************************************/
+/*iconos*/
+.contenedorIconos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &__icono {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+    p {
+      text-align: center;
+      background-color: $secundario;
+      border-radius: 10px;
+      padding: 0.5rem;
+    }
+
+    @include telefono {
+      flex-direction: column;
+
+      p {
+        padding: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.fas {
+  min-width: 60px;
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contenedorIconos {
+    flex-direction: row;
+  }
+  .fas,
+  .fab {
+    min-width: unset;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*fin iconos*/
+/**********************************************************/
+/*card con enlace ver mas*/
+
+.cardsBg {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+}
+
+.cardsBg__CardLinkContenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsBg__cardBanner {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    height: 8rem;
+  }
+
+  @include tablet {
+    flex-direction: row;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.cardsBg__cardBannerTexto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.2;
+
+  a {
+    color: rgb(83, 10, 83);
+  }
+  @include tablet {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .cardsBg__CardLinkContenedor {
+    flex-direction: row;
+  }
+  .cardsBg__cardBanner {
+    flex-direction: column;
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .cardsBg__cardBannerTexto {
+    h4 {
+      margin: 1rem 0;
+    }
+    a {
+      padding: 1rem 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .carousel,
+  .slide {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .cardsBg {
+    display: none !important;
+  }
+}
+/*fin cards con enlace*/
+/**********************************************************/
+
+/*banners*/
+
+.banner__item--bannerImage1 {
+  background-image: url("../img/banner1.png");
+}
+
+.banner__item--bannerImage2 {
+  background-image: url("../img/banner2.png");
+}
+.banner {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.banner__Button {
+  margin-right: 10px;
+  padding: 0.5rem;
+  background-color: $secundario;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 525px) {
+  .banner {
+    padding: 4rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .banner {
+    padding: 5rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .banner {
+    padding: 8rem 0;
+  }
+}
+/*fin Banners*/

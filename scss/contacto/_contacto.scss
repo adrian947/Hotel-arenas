@@ -1,0 +1,78 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.contacto {
+  margin-bottom: 1rem;
+
+  &__Contenedor {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 700px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  &__formContacto {
+    background-color: $primario;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 700px) {
+      min-width: 50%;
+    }
+
+    input {
+      padding: 0.5rem;
+      outline: none;
+    }
+    select {
+      padding: 0.5rem;
+    }
+    textarea {
+      margin-top: 1rem;
+      outline: none;
+      resize: none;
+      padding: 0.2rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.contacto__formContacto .contacto__formBotones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.contacto__btnform {
+  width: 100%;
+}
+
+.contacto__sobre {
+  width: 100%;
+}
+.contacto__sobreInput {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.contacto__sobreInput {
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    outline: none;
+  }
+}
+
+.contacto__btnCatalogo {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+#check {
+  width: unset;
+}

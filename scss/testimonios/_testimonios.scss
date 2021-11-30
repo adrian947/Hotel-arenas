@@ -1,0 +1,114 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.testimoniosImg {
+  cursor: pointer;
+}
+.testiImg {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.col {
+  position: absolute !important;
+  left: 50%;
+}
+.acordionText {
+  width: 30rem;
+  background-color: $secundario;
+  border-radius: 10px;
+  height: auto;
+}
+.accordion-item {
+  border: none;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: $secundario;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(200, 169, 76 / 40%);
+}
+
+.buttonTestimonial {
+  color: #000 !important;
+  background-color: #fff !important;
+  min-width: 18rem;
+}
+@media (max-width: 992px) {
+  .mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .col {
+    position: static !important;
+  }
+  .acordionText {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+.button-testimonio {
+  background-color: $rojo;
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 5px;
+  animation-name: normal;
+  animation-duration: 2s;
+}
+.collapsed {
+  background-color: #900a0a;
+  animation-name: collapsed;
+  animation-duration: 2s;
+}
+
+@keyframes collapsed {
+  from {
+    background-color: $rojo;
+  }
+  to {
+    background-color: #900a0a;
+  }
+}
+@keyframes normal {
+  from {
+    background-color: #900a0a;
+  }
+  to {
+    background-color: $rojo;
+  }
+}
+
+.card {
+  padding: 0.5rem;
+  width: 250px !important;
+  @include telefono {
+    width: 300px !important;
+  }
+}
+
+.card-border {
+  border: 2px solid $secundario;
+  padding: 1rem;
+}
+.card-border-flex {
+  display: flex;
+  align-items: center;
+}
+.card-p {
+  margin: 0px;
+  background-color: #002590;
+  color: #fff;
+  border-radius: 10px 0 10px 0;
+  min-width: 3rem;
+  font-weight: bold;
+  box-shadow: 4px 4px 5px 0px rgba(0, 37, 144, 0.75);
+}
+.testi-icon {
+  padding: 0.5rem;
+  flex: 1;
+  margin: 0;
+  width: 60%;
+  color: $primario;
+}

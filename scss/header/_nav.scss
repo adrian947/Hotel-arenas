@@ -1,0 +1,54 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.nav {
+  background-color: $primario;
+  border-top: 1px solid #fff;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.nav__ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  text-align: center;
+  @include telefono {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.nav ul li a {
+  color: #fff;
+}
+
+/*menu desplegable galeria*/
+ul ul {
+  position: absolute;
+  display: none !important;
+}
+
+ul ul li {
+  display: block !important ;
+}
+
+ul li:hover ul {
+  background-color: $primario;
+  width: 10rem;
+  display: block !important;
+  z-index: 2;
+}
+ul li ul li a {
+  padding: 0.5rem;
+  display: block;
+}
+ul li ul li a:hover {
+  width: 100%;
+  background-color: #fff;
+  color: $primario;
+}
+ol,
+ul {
+  padding-left: 0rem;
+}
+/*fin menu desplegable galeria*/

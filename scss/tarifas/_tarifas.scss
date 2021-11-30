@@ -1,0 +1,17 @@
+@import "../base/variables";
+@import "../base/mixins";
+
+.tarifas {
+  min-height: 45vh;
+}
+
+.tarifas h1 {
+  margin-bottom: 1rem;
+}
+
+table thead tr th {
+  text-align: center;
+}
+table tr td {
+  text-align: center;
+}
