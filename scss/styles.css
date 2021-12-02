@@ -1163,6 +1163,8 @@ footer {
   font-weight: bold;
   -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 37, 144, 0.75);
           box-shadow: 4px 4px 5px 0px rgba(0, 37, 144, 0.75);
+  padding: .2rem;
+  text-align: center;
 }
 
 .testi-icon {
