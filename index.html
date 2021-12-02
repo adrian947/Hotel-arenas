@@ -40,6 +40,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Eliminar marca de agua -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+      $("a[title|='Hosted on free web hosting 000webhost.com. Host your own website for       FREE.']").css("display", "none");
+      $("img[alt|='www.000webhost.com']").css("display", "none");
+      });
+    </script>
+
+
+
     <meta
       name="description"
       content="Descubre Hotel Arenas ubicado estrategicamente para disfrutar de las mejores playas del caribe cubano. Elige entre nuestras suites o habitaciones de lujo siempre con el mejor servicio y una experiencia all-inclusive"

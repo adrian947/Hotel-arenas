@@ -41,6 +41,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+     <!-- Eliminar marca de agua -->
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+     <script>
+       $(document).ready(function(){
+       $("a[title|='Hosted on free web hosting 000webhost.com. Host your own website for       FREE.']").css("display", "none");
+       $("img[alt|='www.000webhost.com']").css("display", "none");
+       });
+     </script>
+
     <meta
       name="description"
       content="Descubre de tres tipos de habitaciones, con el mejor servicio de desayuno, en nuestro lobby unete a shows nocturnos mientras los camareros te sirven un rico coctel. Disfruta de un hotel de playa con todos los sevicios incluidos"
@@ -159,7 +170,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="./img/habitacion1.jpg"
+                src="../img/habitacion1.jpg"
                 alt="Los Angeles"
                 class="d-block imagen__carousel"
                 style="width: 100%"
@@ -167,7 +178,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./img/habitacion2.jpg"
+                src="../img/habitacion2.jpg"
                 alt="Chicago"
                 class="d-block imagen__carousel"
                 style="width: 100%"
@@ -175,7 +186,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./img/habitacion3.jpg"
+                src="../img/habitacion3.jpg"
                 alt="New York"
                 class="d-block imagen__carousel"
                 style="width: 100%"
@@ -183,7 +194,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./img/lobby1.jpeg"
+                src="../img/lobby1.jpeg"
                 alt="New York"
                 class="d-block imagen__carousel"
                 style="width: 100%"
@@ -191,7 +202,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./img/lobby2.png"
+                src="../img/lobby2.png"
                 alt="New York"
                 class="d-block imagen__carousel"
                 style="width: 100%"
@@ -199,7 +210,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./img/lobby3.webp"
+                src="../img/lobby3.webp"
                 alt="New York"
                 class="d-block imagen__carousel"
                 style="width: 100%"
@@ -207,19 +218,15 @@
             </div>
             <div class="carousel-item">
               <img
-                src="./img/playa1.jpg"
+                src="../img/playa1.jpg"
                 alt="New York"
                 class="d-block imagen__carousel"
                 style="width: 100%"
-              />
-              <div class="carousel-caption">
-                <h3>Playas</h3>
-                <p>Lorem ipsum dolor sit.</p>
-              </div>
+              />             
             </div>
             <div class="carousel-item">
               <img
-                src="./img/playa2.webp"
+                src="../img/playa2.webp"
                 alt="New York"
                 class="d-block imagen__carousel"
                 style="width: 100%"
