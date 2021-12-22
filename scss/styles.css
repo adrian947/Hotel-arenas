@@ -257,6 +257,10 @@ img {
   padding: 0.5rem;
 }
 
+.reservaFlex__reservaCampo select {
+  padding: 0.5rem 0;
+}
+
 @media (min-width: 1210px) {
   .reservaFlex {
     -webkit-box-orient: horizontal;
@@ -1006,6 +1010,10 @@ footer {
   text-align: center;
 }
 
+.contenedorIconos__icono p {
+  padding: 1rem;
+}
+
 @media (max-width: 767px) {
   .contenedorIconos__dibujo {
     width: 15rem;
@@ -1412,6 +1420,7 @@ footer {
           flex-direction: column;
   padding: 1rem;
   margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 @media (min-width: 700px) {
